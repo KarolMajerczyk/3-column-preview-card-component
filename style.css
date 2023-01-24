@@ -12,19 +12,26 @@
   font: inherit;
 }
 
+:root {
+  --color-50: hsla(0, 0%, 100%, 0.75);
+  --color-100: hsl(0, 0%, 95%);
+  --color-300: hsl(31, 77%, 52%);
+  --color-500: hsl(184, 100%, 22%);
+  --color-700: hsl(179, 100%, 13%);
+}
+
 html {
   color-scheme: dark light;
 }
 
 body {
   min-height: 100vh;
-  background: hsl(0, 0%, 95%);
+  max-width: 90rem;
+  background: var(--color-100);
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  max-width: 1440px;
 }
 
 img,
@@ -36,17 +43,16 @@ video {
 }
 
 .card-preview {
-  width: 920px;
-  height: 500px;
+  width: 57.5rem;
+  height: 31.25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
 
   display: flex;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .card {
-  background: green;
-  padding: 48px;
+  padding: 3rem;
 
   display: flex;
   flex-direction: column;
@@ -54,73 +60,67 @@ video {
 }
 
 .card:nth-child(1) {
-  background: hsl(31, 77%, 52%);
-  color: hsl(31, 77%, 52%);
+  background: var(--color-300);
+  color: var(--color-300);
 }
 
 .card:nth-child(2) {
-  background: hsl(184, 100%, 22%);
-  color: hsl(184, 100%, 22%);
+  background: var(--color-500);
+  color: var(--color-500);
 }
 
 .card:nth-child(3) {
-  background: hsl(179, 100%, 13%);
-  color: hsl(179, 100%, 13%);
+  background: var(--color-700);
+  color: var(--color-700);
 }
 
 .card-icon {
-  margin-bottom: 35px;
+  margin-bottom: 2.1875rem;
 }
 
 .card-title {
   font-family: "Big Shoulders Display", cursive;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: hsl(0, 0%, 95%);
-  margin-bottom: 25px;
+  color: var(--color-100);
+  margin-bottom: 1.5625rem;
   text-transform: uppercase;
 }
 
 .card-description {
   font-family: "Lexend Deca", sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
-  color: hsla(0, 0%, 100%, 0.75);
-  line-height: 25px;
-
-  margin-bottom: 83px;
+  color: var(--color-50);
+  line-height: 1.5625rem;
+  margin-bottom: 5.1875rem;
 }
 
 .card-button {
-  padding: 11px 31.5px 12px 31.5px;
-  border-radius: 25px;
-
-  background: hsl(0, 0%, 95%);
-  color: inherit;
-  border: none;
-
   font-family: "Lexend Deca", sans-serif;
-  line-height: 25px;
+  padding: 0.5625rem 1.8438rem 0.625rem 1.8438rem;
+  border-radius: 1.5625rem;
+  background: var(--color-100);
+  border: 0.125rem solid var(--color-100);
+  color: inherit;
+  line-height: 1.5625rem;
 }
 
 .card-button:hover {
   background: inherit;
-  color: white;
-  padding: 9px 29.5px 10px 29.5px;
-  border: 2px solid white;
+  color: var(--color-100);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-/* 375px */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 23.4375rem) {
   .card-preview {
     flex-direction: column;
-    width: 327px;
-    height: 1326px;
+    width: 20.4375rem;
+    height: 82.875rem;
   }
 
   .card-description {
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
   }
 }
