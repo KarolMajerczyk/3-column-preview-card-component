@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(0, 0%, 95%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1440px;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.card-preview {
+  width: 920px;
+  height: 500px;
+
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card {
+  background: green;
+  padding: 48px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card:nth-child(1) {
+  background: hsl(31, 77%, 52%);
+  color: hsl(31, 77%, 52%);
+}
+
+.card:nth-child(2) {
+  background: hsl(184, 100%, 22%);
+  color: hsl(184, 100%, 22%);
+}
+
+.card:nth-child(3) {
+  background: hsl(179, 100%, 13%);
+  color: hsl(179, 100%, 13%);
+}
+
+.card-icon {
+  margin-bottom: 35px;
+}
+
+.card-title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 40px;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.card-description {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 25px;
+
+  margin-bottom: 83px;
+}
+
+.card-button {
+  padding: 11px 31.5px 12px 31.5px;
+  border-radius: 25px;
+
+  background: hsl(0, 0%, 95%);
+  color: inherit;
+  border: none;
+
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 25px;
+}
+
+.card-button:hover {
+  background: inherit;
+  color: white;
+  padding: 9px 29.5px 10px 29.5px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 375px */
+@media only screen and (max-width: 375px) {
+  .card-preview {
+    flex-direction: column;
+    width: 327px;
+    height: 1326px;
+  }
+
+  .card-description {
+    margin-bottom: 25px;
+  }
+}
